@@ -18,9 +18,9 @@ public class AutomovelRowMapper implements RowMapper<Automovel> {
 		Automovel automovel = new Automovel();
 		
 		automovel.setId(rs.getInt("ID_AUTOMOVEL"));
-		automovel.setId(rs.getInt("MARCA_AUTOMOVEL"));
-		automovel.setId(rs.getInt("MODELO_AUTOMOVEL"));
-		automovel.setId(rs.getInt("COR_AUTOMOVEL"));
+		automovel.setMarca(rs.getString("MARCA_AUTOMOVEL"));
+		automovel.setModelo(rs.getString("MODELO_AUTOMOVEL"));
+		automovel.setCor(rs.getString("COR_AUTOMOVEL"));
 		
 		return automovel;
 	}
