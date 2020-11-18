@@ -18,7 +18,7 @@ public class DefeitosRowMapper implements RowMapper<Defeitos> {
 		Defeitos defeitos = new Defeitos();
 		
 		defeitos.setId(rs.getInt("ID_DEFEITOS"));
-		defeitos.setDescricao(rs.getString("DEFEITOS_DESCRICAO"));
+		defeitos.setDescricao(rs.getString("DESCRICAO_DEFEITOS"));
 		
 		return defeitos;
 	}
