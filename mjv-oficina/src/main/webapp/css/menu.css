@@ -1,0 +1,44 @@
+/* Modal */
+.modal-menu {
+	max-width: 607px;
+	top: calc(50% - 220px);
+	left: calc(50% - 303px);
+}
+
+.titulo {
+	text-align: center;
+	margin: 40px 0;
+}
+
+.botoes {
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding: 0 20px;
+	margin-bottom: 20px;
+}
+
+.botao {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 27px;
+
+	background-color: var(--botao-menu);
+	border-radius: 10px;
+	margin-bottom: 20px;
+
+	width: 251px;
+	height: 129px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition: all 0.3s;
+}
+
+.botao:hover {
+	background-color: var(--botao-menu-hover);
+}

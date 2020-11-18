@@ -1,0 +1,17 @@
+/* Modal */
+.modal-menu {
+	max-width: 472px;
+	top: calc(50% - 220px);
+	left: calc(50% - 180px);
+	padding: 0 30px;
+}
+
+.titulo {
+	margin: 40px 0 10px 0;
+}
+
+.botoes {
+	justify-content: space-between;
+	align-items: center;
+	margin: 30px 0;
+}

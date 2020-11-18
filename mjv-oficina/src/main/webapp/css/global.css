@@ -1,0 +1,160 @@
+/* Global */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Cores */
+:root {
+    --titulo: #282828;
+    --subtitulo: #282828;
+
+    --botao-menu: #702094;
+    --botao-menu-hover: #5d1a7c;
+
+    --cinza-desabilitado: #BFBFBF;
+
+    --botao-fechar: #EDCDFE;
+    --botao-fechar-hover: #e3b0ff;
+    --botao-fechar-icone: #282828;
+
+    --botao-voltar: #7B0B9A;
+    --botao-voltar-hover: #680883;
+
+    --botao-salvar: #780AA0;
+    --botao-salvar-hover: #6C0591;
+
+    --input-placeholder: #808080;
+    --input-borda: #CECECE;
+    --input-borda-ativo: #282828;
+
+    --tr-fundo: #F0F0F0;
+}
+
+body {
+    font-family: 'Catamaran', sans-serif;
+}
+
+h2 {
+    font-family: 'Baloo 2', cursive;
+    color: #282828;
+    font-size: 32px;
+}
+
+.ativo {
+    display: block !important;
+}
+
+/* Modal */
+.modal-bg {
+    background-color: #000000CC;
+
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    transition: all .3s;
+}
+
+.modal-menu {
+	width: 100%;
+	background-color: #ffffff;
+	margin: 0 auto;
+	border-radius: 10px;
+	position: absolute;
+	display: none;
+}
+
+.botao-fechar {
+    position: absolute;
+    right: 11px;
+    top: 8px;
+    background: var(--botao-fechar);
+    color: var(--botao-fechar-icone);
+    border-radius: 50%;
+    padding: 1px 8px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.botao-fechar:hover {
+    background-color: var(--botao-fechar-hover);
+}
+
+.titulo {
+	text-align: left;
+	font-weight: 900;
+}
+
+.botoes {
+	display: flex;
+}
+
+.input-group {
+    position: relative;
+}
+
+.modal-menu .input {
+	border: 1px solid var(--input-borda);
+	padding: 5px 45px;
+	width: 100%;
+	outline: none;
+	margin: 20px 0;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.input-icone {
+    position: absolute;
+    top: 28px;
+    left: 12px;
+    color: var(--input-placeholder);
+}
+
+.cadastro {
+    position: absolute;
+    right: 15px;
+    top: 28px;
+    color: var(--input-placeholder);
+    display: none;
+}
+
+.botao-voltar {
+	text-decoration: none;
+	color: var(--botao-voltar);
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.botao-voltar-seta {
+    font-size: 12px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.botao-voltar:hover {
+    color: var(--botao-voltar-hover);
+}
+
+.botao-salvar {
+	background-color: var(--botao-salvar);
+	border: none;
+	outline: none;
+	border-radius: 20px;
+	width: 50%;
+	height: 40px;
+	font-size: 18px;
+	font-weight: 900;
+	color: #ffffff;
+    font-family: 'Catamaran', cursive;
+    cursor: pointer;
+}
+
+.botao-salvar:hover {
+	background-color: var(--botao-salvar-hover);
+}
