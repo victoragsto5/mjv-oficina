@@ -1,4 +1,4 @@
-package br.com.mjv.oficina.home.dao;
+package br.com.mjv.oficina.dao;
 
 import java.util.List;
 
@@ -7,22 +7,21 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import br.com.mjv.oficina.home.model.Pecas;
-import br.com.mjv.oficina.home.model.PecasRowMapper;
-
+import br.com.mjv.oficina.model.TipoVeiculo;
+import br.com.mjv.oficina.model.TipoVeiculoRowMapper;
 
 @Repository
-public class PecasDaoImpl implements PecasDao{
+public class TipoVeiculoDaoImpl implements TipoVeiculoDao{
 	
 	@Autowired
 	private NamedParameterJdbcTemplate template;
 	
 	@Override
-	public List<Pecas> listarPecas() {
+	public List<TipoVeiculo> listar() {
 		try {
-			String sql = " SELECT * FROM TB_PECAS ";
+			String sql = " SELECT * FROM TB_TIPO_VEICULO ";
 
-			List<Pecas> lista = this.template.query(sql, new PecasRowMapper());
+			List<TipoVeiculo> lista = this.template.query(sql, new TipoVeiculoRowMapper());
 			
 			return lista;
 		} catch (EmptyResultDataAccessException e) {
@@ -31,11 +30,9 @@ public class PecasDaoImpl implements PecasDao{
 	}
 
 	@Override
-	public Pecas incluir(Pecas hq) {
+	public TipoVeiculo incluir(TipoVeiculo tipoVeiculo) {
 		return null;
 	}
-
-
 
 	
 }

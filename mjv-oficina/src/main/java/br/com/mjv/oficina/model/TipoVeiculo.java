@@ -1,8 +1,8 @@
-package br.com.mjv.oficina.home.model;
+package br.com.mjv.oficina.model;
 
-public class Defeitos {
+public class TipoVeiculo {
 	
-	private Integer id;
+	private Integer id; 
 	private String descricao;
 	
 	public Integer getId() {
@@ -17,4 +17,5 @@ public class Defeitos {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+
 }

@@ -1,4 +1,4 @@
-package br.com.mjv.oficina.home.dao;
+package br.com.mjv.oficina.dao;
 
 import java.util.List;
 
@@ -7,21 +7,23 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import br.com.mjv.oficina.home.model.Automovel;
-import br.com.mjv.oficina.home.model.AutomovelRowMapper;
+import br.com.mjv.oficina.model.Defeitos;
+import br.com.mjv.oficina.model.DefeitosRowMapper;
+
+
 
 @Repository
-public class AutomovelDaoImpl implements AutomovelDao{
+public class DefeitosDaoImpl implements DefeitosDao{
 	
 	@Autowired
 	private NamedParameterJdbcTemplate template;
 	
 	@Override
-	public List<Automovel> listar() {
+	public List<Defeitos> listarDefeitos() {
 		try {
-			String sql = " SELECT * FROM TB_AUTOMOVEL ";
+			String sql = " SELECT * FROM TB_DEFEITOS ";
 
-			List<Automovel> lista = this.template.query(sql, new AutomovelRowMapper());
+			List<Defeitos> lista = this.template.query(sql, new DefeitosRowMapper());
 			
 			return lista;
 		} catch (EmptyResultDataAccessException e) {
@@ -30,9 +32,11 @@ public class AutomovelDaoImpl implements AutomovelDao{
 	}
 
 	@Override
-	public Automovel incluir(Automovel hq) {
+	public Defeitos incluir(Defeitos defeitos) {
 		return null;
 	}
+
+
 
 	
 }

@@ -1,8 +1,8 @@
-package br.com.mjv.oficina.home.dao;
+package br.com.mjv.oficina.dao;
 
 import java.util.List;
 
-import br.com.mjv.oficina.home.model.Automovel;
+import br.com.mjv.oficina.model.Automovel;
 
 
 public interface AutomovelDao {

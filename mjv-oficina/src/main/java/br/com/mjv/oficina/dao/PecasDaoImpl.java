@@ -1,4 +1,4 @@
-package br.com.mjv.oficina.home.dao;
+package br.com.mjv.oficina.dao;
 
 import java.util.List;
 
@@ -7,36 +7,28 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import br.com.mjv.oficina.home.model.Defeitos;
-import br.com.mjv.oficina.home.model.DefeitosRowMapper;
-
+import br.com.mjv.oficina.model.Peca;
+import br.com.mjv.oficina.model.PecaRowMapper;
 
 
 @Repository
-public class DefeitosDaoImpl implements DefeitosDao{
+public class PecasDaoImpl implements PecasDao{
 	
 	@Autowired
 	private NamedParameterJdbcTemplate template;
 	
 	@Override
-	public List<Defeitos> listarDefeitos() {
+	public List<Peca> listarPecas() {
 		try {
-			String sql = " SELECT * FROM TB_DEFEITOS ";
+			String sql = " SELECT * FROM TB_PECAS ";
 
-			List<Defeitos> lista = this.template.query(sql, new DefeitosRowMapper());
+			List<Peca> lista = this.template.query(sql, new PecaRowMapper());
 			
 			return lista;
 		} catch (EmptyResultDataAccessException e) {
 			return null;
 		}
 	}
-
-	@Override
-	public Defeitos incluir(Defeitos defeitos) {
-		return null;
-	}
-
-
 
 	
 }

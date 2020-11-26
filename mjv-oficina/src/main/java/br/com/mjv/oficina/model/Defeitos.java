@@ -1,10 +1,9 @@
-package br.com.mjv.oficina.home.model;
+package br.com.mjv.oficina.model;
 
-public class Pecas {
+public class Defeitos {
 	
 	private Integer id;
 	private String descricao;
-	private Double preco;
 	
 	public Integer getId() {
 		return id;
@@ -18,12 +17,4 @@ public class Pecas {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public Double getPreco() {
-		return preco;
-	}
-	public void setPreco(Double preco) {
-		this.preco = preco;
-	}
-	
-	
 }

@@ -1,4 +1,4 @@
-package br.com.mjv.oficina.home.model;
+package br.com.mjv.oficina.model;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -7,15 +7,15 @@ import org.springframework.jdbc.core.RowMapper;
 
 
 /**
-  *Classe de mapeamento do modelo{@link Pecas} para a tabela TB_PECAS
+  *Classe de mapeamento do modelo{@link Peca} para a tabela TB_PECAS
   *@author Victor de Paula
 */
-public class PecasRowMapper implements RowMapper<Pecas> {
+public class PecaRowMapper implements RowMapper<Peca> {
 	
 	@Override
-	public Pecas mapRow(ResultSet rs, int rowNum) throws SQLException {
+	public Peca mapRow(ResultSet rs, int rowNum) throws SQLException {
 
-		Pecas pecas = new Pecas();
+		Peca pecas = new Peca();
 		
 		pecas.setId(rs.getInt("ID_PECAS"));
 		pecas.setDescricao(rs.getString("PECAS_DESCRICAO"));

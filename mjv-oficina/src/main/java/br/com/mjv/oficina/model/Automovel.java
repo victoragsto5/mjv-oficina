@@ -1,4 +1,4 @@
-package br.com.mjv.oficina.home.model;
+package br.com.mjv.oficina.model;
 
 public class Automovel {
 	
